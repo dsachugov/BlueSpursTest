@@ -1,20 +1,13 @@
+plugins {
+	id "org.springframework.boot" version "1.4.3.RELEASE"
+}
+
 group 'com.bluespurs.starterkit'
 version '1.0.0'
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE'
-    }
-}
 
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
 // Load the properties file.
@@ -38,7 +31,7 @@ configurations {
 
 ext {
     gsonVersion = '2.5'
-    guavaVersion = '19.0'
+    guavaVersion = '20.0'
     gsonVersion = '2.6.1'
 
 	hibernateValidatorVersion = '5.2.4.Final'
@@ -80,5 +73,5 @@ bootRepackage {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.2.1'
+    gradleVersion = '3.3'
 }
